@@ -16,15 +16,15 @@ def netscan():  #CREATE A NETSCAN FUNCTION
     ip = socket.gethostbyname(socket.gethostname()) # CREATE THE VARIABLE FOR THE NETSCANNER
     for port in range(65535):  # THERE ARE 65535 PORTS ON NETWORKS, ALL OF THEM GET SCANNED 
          try:
-            serv = socket.socket(socket.AF_INET,socket.SOCK_STREAM) 
+            client = socket.socket(socket.AF_INET,socket.SOCK_STREAM) 
 
             #  AF_INET = (INTERNET) ADDRESS FAMILY FOR IPV4  
             #  SOCK_STREAM IS FOR THE TCP(PROTOCOL FOR SENDING MESSAGES WITHIN NETWORKS)
 
-            serv.bind((ip,port)) # ASSIGNS AN IP AND A PORT TO A SOCKET INSTANCE
+            client.bind((ip,port)) # ASSIGNS AN IP AND A PORT TO A SOCKET INSTANCE
          except:
                print(f"[OPEN] Port open : {port}") # PRINT LIST OF ALL OPEN PORTS
-               serv.close() # CLOSE THE SERVER CONNECTION
+               slient.close() # CLOSE THE SERVER INSTANCE
 
 help_cmd = """
 netscan /all  -  Scan all networks [RECCOMENDED FOR SCANNING NETWORKS] 

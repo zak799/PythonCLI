@@ -24,7 +24,7 @@ def netscan():  #CREATE A NETSCAN FUNCTION
             client.bind((ip,port)) # ASSIGNS AN IP AND A PORT TO A SOCKET INSTANCE
          except:
                print(f"[OPEN] Port open : {port}") # PRINT LIST OF ALL OPEN PORTS
-               slient.close() # CLOSE THE SERVER INSTANCE
+               client.close() # CLOSE THE SERVER INSTANCE
 
 help_cmd = """
 netscan /all  -  Scan all networks [RECCOMENDED FOR SCANNING NETWORKS] 
